@@ -9,7 +9,7 @@ pip install -r requirements.txt
 python server.py
 ```
 
-Open http://127.0.0.1:5000.
+Open http://127.0.0.1:5000 locally, or use the course lab's application launcher on port 5000.
 
 ## Checks
 
@@ -20,4 +20,6 @@ pylint server.py
 
 The detector returns anger, disgust, fear, joy, sadness, and dominant_emotion. Blank input and Watson status 400 return None for all fields.
 
-Unit tests use mocked Watson HTTP responses. They verify the required five emotions, output format, blank input, and status 400; they do not verify the live model. The live Skills Network Watson endpoint timed out from this computer during preparation. No live Watson success is claimed.
+`test_emotion_detection.py` tests the five required phrases against the real Watson service. Run it where the endpoint is reachable. `test_emotion_logic.py` separately tests formatting and error handling using mocked HTTP responses.
+
+The live Skills Network Watson endpoint timed out from this computer during preparation. No live Watson success is claimed. Live test output must be captured in an environment where the service responds.
