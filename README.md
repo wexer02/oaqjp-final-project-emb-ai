@@ -1,4 +1,4 @@
-# Emotion Detector
+# Final Project
 
 IBM Watson NLP Emotion Detector (oaqjp-final-project-emb-ai).
 
